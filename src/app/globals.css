@@ -1,7 +1,38 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global text color */
+* {
+  color: white;
+}
 
+/* Drift animation for starfield */
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
+.animate-drift {
+  animation: drift 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0); /* GPU compositing for smoothness */
+}
+
+/* Twinkle animation for stars */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
