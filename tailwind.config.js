@@ -25,7 +25,11 @@ module.exports = {
         drift: 'drift 120s linear infinite',
         twinkle: 'twinkle 2s ease-in-out infinite',
       },
-      
+      margin: {
+        128: '32rem',
+        144: '36rem',
+        160: '40rem',
+      },
       
       
       
