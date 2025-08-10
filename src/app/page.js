@@ -79,6 +79,8 @@ export default function Home() {
             opacity,
             transform: `scale(${0.9 + opacity * 0.1})`,
             transition: 'opacity 0.1s ease-out, transform 0.1s ease-out',
+            pointerEvents: opacity === 0 ? 'none' : 'auto', // 👈 disables clicks when invisible
+            visibility: opacity === 0 ? 'hidden' : 'visible', // 👈 optional: hides it visually
           }}
         >
           <h1 className="text-[70px] text-white font-bold text-center">Hi, I'm Jeremiah!</h1>
@@ -138,7 +140,7 @@ export default function Home() {
         </section>
 
         {/* CONTACT FORM SECTION */}
-        <section id="contact-form" className="min-h-screen flex flex-col items-center justify-center px-4">
+        <section id="contact-form" className="z-20 min-h-screen flex flex-col items-center justify-center px-4">
           <h1 className="text-[50px] font-bold">Contact Me</h1>
           <form
             onSubmit={handleSubmit}
