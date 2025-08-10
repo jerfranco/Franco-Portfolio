@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global text color */
 * {
   color: white;
 }
 
-/* Drift animation for starfield */
 @keyframes drift {
   0% {
     transform: translateX(0);
@@ -20,10 +18,9 @@
 .animate-drift {
   animation: drift 60s linear infinite;
   will-change: transform;
-  transform: translateZ(0); /* GPU compositing for smoothness */
+  transform: translateZ(0);
 }
 
-/* Twinkle animation for stars */
 @keyframes twinkle {
   0%, 100% {
     opacity: 1;

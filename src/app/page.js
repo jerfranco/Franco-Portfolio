@@ -8,9 +8,8 @@ export default function Home() {
   const [username, setUsername] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [opacity, setOpacity] = useState(1); // 👈 for fade effect
+  const [opacity, setOpacity] = useState(1);
 
-  // ✅ Generate stars only once
   const generateStars = (count) =>
     Array.from({ length: count }).map((_, i) => ({
       key: i,
@@ -22,7 +21,6 @@ export default function Home() {
 
   const stars = useMemo(() => generateStars(150), []);
 
-  // Fade effect on scroll
   useEffect(() => {
     const handleScroll = () => {
       const fadeDistance = window.innerHeight * 0.8;
@@ -53,7 +51,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Fixed starfield background */}
       <div className="fixed top-0 left-0 w-full h-full bg-black overflow-hidden -z-10 pointer-events-none">
         <div className="w-[200%] h-full flex animate-drift">
           <div className="relative w-1/2 h-full">
@@ -66,10 +63,9 @@ export default function Home() {
               <StaticStar key={`b-${key}`} style={style} />
             ))}
           </div>
-        </div>
+        </div>00
       </div>
 
-      {/* Scrollable content */}
       <main className="relative z-10 mx-4 sm:mx-8 lg:mx-32 xl:mx-128">
 
         {/* INTRO SECTION with fade */}
@@ -79,8 +75,8 @@ export default function Home() {
             opacity,
             transform: `scale(${0.9 + opacity * 0.1})`,
             transition: 'opacity 0.1s ease-out, transform 0.1s ease-out',
-            pointerEvents: opacity === 0 ? 'none' : 'auto', // 👈 disables clicks when invisible
-            visibility: opacity === 0 ? 'hidden' : 'visible', // 👈 optional: hides it visually
+            pointerEvents: opacity === 0 ? 'none' : 'auto',
+            visibility: opacity === 0 ? 'hidden' : 'visible',
           }}
         >
           <h1 className="text-[70px] text-white font-bold text-center">Hi, I'm Jeremiah!</h1>

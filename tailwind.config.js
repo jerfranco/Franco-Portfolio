@@ -17,8 +17,8 @@ module.exports = {
           '100%': { transform: 'translateX(-50%)' },
         },
         twinkle: {
-          '0%, 100%': { opacity: '1' },     // brightest
-          '50%': { opacity: '0.4' },        // dimmer
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.4' },
         },
       },
       animation: {
