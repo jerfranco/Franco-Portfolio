@@ -2,6 +2,8 @@
 import { supabase } from '../lib/supabaseClient';
 import { useState, useMemo, useEffect } from 'react';
 import StaticStar from '../components/StaticStar';
+import { projects } from '@/data/project';
+import Projects from '../components/Projects';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -110,100 +112,22 @@ export default function Home() {
         </div>
 
         {/*ABOUT ME SECTION */}
-        <div className="min-h-screen flex flex-col justify-center">
-          <h1 className="text-[50px] font-bold border-b border-b-white">About Me</h1>
+        {/* <div className="min-h-screen flex flex-col justify-center">
+          <h1 className="text-[30px] sm:text-[50px] font-bold border-b border-b-white">About Me</h1>
           
-        </div>
+        </div> */}
 
         {/* PROJECTS SECTION */}
         <div id="project" className="min-h-screen flex flex-col justify-center">
-          <h1 className="text-[50px] font-bold border-b border-b-white">Projects</h1>
-            <h2 className="mt-6 text-xl font-bold">REC Services</h2>
-              <p className="italic mb-4">
-                Brigham Young University - Idaho / Apr 2025 - August 2025
-              </p>
-              <ul className="list-disc pl-6">
-                <li>
-                  Developed a comprehensive web application for managing service requests,
-                  technician assignments, and customer communications for REC Services department at Brigham
-                  Young University - Idaho
-                </li>
-                <li>
-                  Implemented real-time notifications and reporting features to enhance user experience
-                  and operational efficiency
-                </li>
-              </ul>
-            <h2 className="mt-6 text-xl font-bold">Movie Web Finder</h2>
-              <p className="italic mb-4">Brigham Young University - Idaho / Jan 2025 - Apr 2025</p>
-              <ul className="list-disc pl-6">
-                <li>
-                  Built a full-stack movie discovery app using Svelte and Supabase, tested by over 100 users
-                </li>
-                <li>
-                  Fetched movie data from an external API to enable search and display for 500,000+ movie titles
-                </li>
-                <li>
-                  Developed a user authentication system with Supabase, supporting secure login and session tracking for 100+
-                  registered users
-                </li>
-              </ul>
-            <h2 className="mt-6 text-xl font-bold">Scholar Manager</h2>
-              <p className="italic mb-4">Brigham Young University - Idaho / Sept 2024 - Dec 2024</p>
-              <ul className="list-disc pl-6">
-                <li>
-                  Designed and developed a full-stack web application using Node.js and MongoDB to help college students track and
-                  manage personal finances
-                </li>
-                <li>
-                  Implemented user authentication, data validation, and error handling to assure secure and accurate data
-                  management
-                </li>
-                <li>
-                  Integrated MongoDB to store and organize user data, facilitating real-time tracking of income and expenses for
-                  more than 500 college students
-                </li>
-              </ul>
-            <h2 className="mt-6 text-xl font-bold">Network Design II</h2>
-              <p className="italic mb-4">Brigham Young University - Idaho / Jan 2024 - Apr 2024</p>
-              <ul className="list-disc pl-6">
-                <li>
-                  Configured Cisco routers and switches with VLANs, DHCP, and OSPF areas to support branch network
-                  connectivity and segment traffic efficiently
-                </li>
-                <li>
-                  Installed and secured LAN and WAN infrastructure following best practices, including port security and
-                  basic network hardening techniques
-                </li>
-                <li>
-                  Maintained accurate documentation of device configurations using show run outputs for
-                  troubleshooting, audits, and backup purposes
-                </li>
-                <li>
-                  Applied networking concepts such as IPv4 addressing, NAT/PAT, and subnetting in real-world lab
-                  scenarios under supervision of a Senior Network Engineer
-                </li>
-              </ul>
-            <h2 className="mt-6 text-xl font-bold">Class Roulette</h2>
-            <p className="italic mb-4">Brigham Young University - Idaho / Sept 2023 - Dec 2023</p>
-            <ul className="list-disc pl-6">
-              <li>
-                Collaborated with a team of 6 to develop a web application helps teachers store class information and randomly
-                select students with a single click
-              </li>
-              <li>
-                Influenced development of front-end interface, enhancing user experience and making student selection process
-                quick and intuitive
-              </li>
-              <li>
-                Cooperated closely with team to ensure proper integration between front-end and data handling logic, resulting in
-                smooth and reliable application performance
-              </li>
-            </ul>
+          <h1 className="text-[30px] sm:text-[50px] font-bold border-b border-b-white mb-4">
+          Projects
+        </h1>
+        <Projects projects={projects} />
         </div>
 
         {/* CONTACT FORM SECTION */}
         <section id="contact-form" className="z-20 min-h-screen flex flex-col items-center justify-center px-4">
-          <h1 className="text-[50px] font-bold">Contact Me</h1>
+          <h1 className="text-[30px] sm:text-[50px] font-bold">Contact Me</h1>
           <form
             onSubmit={handleSubmit}
             className="p-6 rounded shadow-md w-full max-w-md"
