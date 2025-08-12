@@ -79,13 +79,13 @@ export default function Home() {
             visibility: opacity === 0 ? 'hidden' : 'visible',
           }}
         >
-          <h1 className="text-[70px] text-white font-bold text-center">Hi, I'm Jeremiah!</h1>
-          <h2 className="text-[30px] mt-6 mb-6 text-center">
+          <h1 className="text-[50px] text-white font-bold text-center sm:text-[70px]">Hi, I'm Jeremiah!</h1>
+          <h2 className="text-[25px] mt-6 mb-6 text-center">
             Turning Ideas into Websites, Systems, and Solutions
           </h2>
           <div className="flex gap-4 mt-4 w-full max-w-md">
             <button
-              className="flex-1 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-300 transition font-bold"
+              className="flex-1 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-300 transition font-bold text-sm"
               onClick={() =>
                 document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
               }
@@ -94,13 +94,13 @@ export default function Home() {
             </button>
             <button
               onClick={() => window.open('https://www.linkedin.com/in/jeremiah-franco/', '_blank')}
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-bold"
+              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-bold text-sm"
             >
               LinkedIn
             </button>
             <button
               onClick={() => window.open('https://github.com/jerfranco', '_blank')}
-              className="flex-1 px-4 py-2 bg-[#6E5494] text-white rounded-md hover:bg-[#6E5494]/80 transition font-bold"
+              className="flex-1 px-4 py-2 bg-[#6E5494] text-white rounded-md hover:bg-[#6E5494]/80 transition font-bold text-sm"
             >
               Github
             </button>
@@ -108,8 +108,14 @@ export default function Home() {
 
         </div>
 
+        {/*ABOUT ME SECTION */}
+        <div className="min-h-screen flex flex-col justify-center">
+          <h1 className="text-[50px] font-bold border-b border-b-white">About Me</h1>
+          
+        </div>
+
         {/* PROJECTS SECTION */}
-        <section id="project" className="min-h-screen flex flex-col justify-center">
+        <div id="project" className="min-h-screen flex flex-col justify-center">
           <h1 className="text-[50px] font-bold border-b border-b-white">Projects</h1>
             <h2 className="mt-6 text-xl font-bold">REC Services</h2>
               <p className="italic mb-4">
@@ -192,7 +198,7 @@ export default function Home() {
                 smooth and reliable application performance
               </li>
             </ul>
-        </section>
+        </div>
 
         {/* CONTACT FORM SECTION */}
         <section id="contact-form" className="z-20 min-h-screen flex flex-col items-center justify-center px-4">
