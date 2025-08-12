@@ -79,13 +79,14 @@ export default function Home() {
             visibility: opacity === 0 ? 'hidden' : 'visible',
           }}
         >
-          <h1 className="text-[50px] text-white font-bold text-center sm:text-[70px]">Hi, I'm Jeremiah!</h1>
-          <h2 className="text-[25px] mt-6 mb-6 text-center">
-            Turning Ideas into Websites, Systems, and Solutions
+          <h1 className="text-[44px] text-white font-bold text-center sm:text-[70px]">Hi, I'm Jeremiah!</h1>
+          <h2 className="text-[25px] mt-6 mb-6 text-center sm:text-[30px]">
+            <span className="block sm:inline">Turning Ideas into </span>
+            <span className="block sm:inline">Websites, Systems, and Solutions</span>
           </h2>
           <div className="flex gap-4 mt-4 w-full max-w-md">
             <button
-              className="flex-1 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-300 transition font-bold text-sm"
+              className="flex-1 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-300 transition font-bold text-[12px] sm:text-[16px]"
               onClick={() =>
                 document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
               }
@@ -94,13 +95,13 @@ export default function Home() {
             </button>
             <button
               onClick={() => window.open('https://www.linkedin.com/in/jeremiah-franco/', '_blank')}
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-bold text-sm"
+              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition font-bold text-[12px] sm:text-[16px]"
             >
               LinkedIn
             </button>
             <button
               onClick={() => window.open('https://github.com/jerfranco', '_blank')}
-              className="flex-1 px-4 py-2 bg-[#6E5494] text-white rounded-md hover:bg-[#6E5494]/80 transition font-bold text-sm"
+              className="flex-1 px-4 py-2 bg-[#6E5494] text-white rounded-md hover:bg-[#6E5494]/80 transition font-bold text-[12px] sm:text-[16px]"
             >
               Github
             </button>
